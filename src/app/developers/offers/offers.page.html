@@ -1,0 +1,39 @@
+<ion-header>
+	<ion-toolbar color="primary">
+		<ion-title>My Offers</ion-title>
+		<ion-buttons slot="primary">
+			<ion-button routerLink="/developers/tabs/offers/create">
+				<ion-icon name="add-outline" slot="icon-only"></ion-icon>
+			</ion-button>
+		</ion-buttons>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content>
+	<ion-card>
+		<ion-avatar>
+			<img src="{{myOffer.avatar}}" />
+		</ion-avatar>
+		<ion-card-header>
+			<ion-card-title>{{myOffer.title}}</ion-card-title>
+			<ion-card-subtitle>{{myOffer.description}}</ion-card-subtitle>
+		</ion-card-header>
+
+		<ion-card-content>
+			<ion-list lines="none">
+				<ion-list-header color="light">
+					<!-- <ion-icon name="leaf" item-left></ion-icon> -->
+					<ion-icon name="wallet-outline" item-left></ion-icon>
+					<ion-label>&nbsp;Charges</ion-label></ion-list-header
+				>
+				<ion-item>
+					<ion-label>{{myOffer.pricing}}</ion-label>
+				</ion-item>
+				<ion-list-header color="light"><ion-icon name="time-outline"></ion-icon>&nbsp;Availability </ion-list-header>
+				<ion-item>
+					<ion-label> {{myOffer.availability}}</ion-label>
+				</ion-item>
+			</ion-list>
+		</ion-card-content>
+	</ion-card>
+</ion-content>
